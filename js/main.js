@@ -12,9 +12,21 @@ initialiserEnigmes();
 
 
 function initialiserEnigmes() {
-	const NB_ENIGMES_PIGEES = 5;
+    const NB_ENIGMES_PIGEES = 5;
 
-    // À compléter
+    // Cinq tirages sans remise : l'énigme pigée et sa réponse quittent la
+    // banque, pour qu'aucune ne revienne deux fois dans la même partie.
+    for (let i = 0; i < NB_ENIGMES_PIGEES; i++) {
+        const intIndexHasard = obtenirNombreEntierAleatoire(0, arrEnigmes.length - 1);
+
+        arrEnigmesPigees.push(arrEnigmes[intIndexHasard]);
+        arrReponsesEnigmesPigees.push(arrReponsesEnigmes[intIndexHasard]);
+
+        arrEnigmes.splice(intIndexHasard, 1);
+        arrReponsesEnigmes.splice(intIndexHasard, 1);
+    }
+
+    refEnigmeCourante.textContent = arrEnigmesPigees[intIndexEnigmeCourant];
 }
 
 function validerReponseEnigme () {
