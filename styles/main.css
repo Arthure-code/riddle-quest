@@ -76,11 +76,11 @@ button:hover {
 }
 
 #commentaireEnigme {
-    color: green;
+    color: #006400;
 }
 
 #commentaireEnigme.erreur {
-    color: red;
+    color: #c00000;
 }
 
 /* La légende du fieldset remplace l'ancien h2 et doit se placer comme lui :
@@ -97,3 +97,7 @@ legend {
 legend ~ * {
     clear: both;
 }
+
+/* Ces deux teintes remplacent red et green : sur le fond gris de la page,
+   celles-ci donnaient 3,0:1 et 3,9:1, sous les 4,5:1 qu'exige WCAG 2.1
+   (critère 1.4.3). Les nouvelles donnent 4,9:1 et 5,6:1. */
