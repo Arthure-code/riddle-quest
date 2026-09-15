@@ -4,8 +4,9 @@ const arrEnigmesPigees = new Array();
 const arrReponsesEnigmesPigees = new Array();
 
 
-document.getElementById('boutonRepondre').addEventListener('click', validerReponseEnigme);
-document.querySelector('form').addEventListener('submit', empecherEnvoiForm);
+// Le bouton est un bouton de soumission : le clic et la touche Entrée passent
+// tous deux par l'événement submit du formulaire.
+document.querySelector('form').addEventListener('submit', repondreAuFormulaire);
 
 initialiserEnigmes();
 
@@ -57,8 +58,9 @@ function validerReponseEnigme () {
     }
 }
 
-function empecherEnvoiForm(objEvenement) {
+function repondreAuFormulaire(objEvenement) {
     objEvenement.preventDefault();
+    validerReponseEnigme();
 }
 
 /**
