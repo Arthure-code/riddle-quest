@@ -6,8 +6,6 @@ right answer earns a star; five stars end the quest.
 Plain HTML, CSS and JavaScript. No framework, no build step, no dependency:
 open the file and play.
 
-> The user interface is in French, as is the code vocabulary. This README and
-> the repository metadata are in English.
 
 ## Screenshots
 
