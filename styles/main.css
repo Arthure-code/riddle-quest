@@ -1,0 +1,84 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 1em;
+    background: rgb(223, 223, 223);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 0;
+    padding: 40px 16px 0px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 440px;
+    padding: 40px 16px 32px;
+}
+
+button {
+    transition: background-color 0.3s ease;
+    appearance: none;
+    padding: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 12px;
+    margin-top: 24px;
+    background: rgb(174, 220, 255);
+    border: 1px solid rgb(174, 220, 255);
+    border-radius: 4px;
+    font-size: inherit;
+}
+
+button:hover {
+    background: rgb(215, 238, 255);
+}
+
+.cacher {
+    display: none;
+}
+
+.listeEtoiles {
+    list-style-type: none;
+    margin-top: 16px;
+    padding: 0;
+}
+
+.listeEtoiles li {
+    padding: 16px 16px 16px 44px;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 4px;
+}
+
+.mt-md {
+    margin-top: 24px;
+}
+
+#enigmeCourante {
+    padding: 16px 12px;
+    background: rgb(240, 240, 240);
+    font-size: 1.15rem;
+    text-align: center;
+    border-radius: 4px;
+}
+
+#commentaireEnigme {
+    color: green;
+}
+
+#commentaireEnigme.erreur {
+    color: red;
+}

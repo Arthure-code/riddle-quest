@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeu d'énigmes</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script defer src="js/enigmes.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Jeu d'énigmes</h1>
+    </header>
+    <main>
+        <form class="formulaire" novalidate>
+            <fieldset id="sectionEnigmes" class="formulaire__etape" aria-labelledby="titreEnigme">
+                <h2 id="titreEnigme">Énigmes</h2>
+                <div id="zoneEnigme">
+                    <p id="enigmeCourante"></p>
+                    <div class="zone-champ">
+                        <label for="champReponseEnigme">Votre réponse</label>
+                        <input id="champReponseEnigme" type="text" />
+                        <span id="commentaireEnigme"></span>
+                    </div>
+                    <button type="button" id="boutonRepondre">Répondre</button>
+                </div>
+
+                <div class="listeEtoiles" id="listeEtoiles">
+                    <img src="images/etoile.png" alt="étoile" id="etoileEnigme1" class="cacher">
+                    <img src="images/etoile.png" alt="étoile" id="etoileEnigme2" class="cacher">
+                    <img src="images/etoile.png" alt="étoile" id="etoileEnigme3" class="cacher">
+                    <img src="images/etoile.png" alt="étoile" id="etoileEnigme4" class="cacher">
+                    <img src="images/etoile.png" alt="étoile" id="etoileEnigme5" class="cacher">
+                </div>
+            </fieldset>
+            <div id="finJeu" class="cacher">
+                <h2>Bravo!</h2>
+            </div>
+        </form>
+    </main>
+</body>
+</html>
