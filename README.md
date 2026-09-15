@@ -6,7 +6,6 @@ right answer earns a star; five stars end the quest.
 Plain HTML, CSS and JavaScript. No framework, no build step, no dependency:
 open the file and play.
 
-
 ## Screenshots
 
 ![A light grey page titled Jeu d'énigmes. A bordered panel headed Énigmes holds the riddle On me trouve après la Terre mais avant avril in a pale box, a Votre réponse field, a light blue Répondre button, and two yellow stars with white centres, one for each riddle already solved](preview.png)
@@ -57,7 +56,7 @@ normalisation, espaces, casse, accents et œ, pour qu'une faute d'accent ne
 prive pas l'enfant de son étoile. L'apparition et la disparition des
 éléments passent par une seule classe, `.cacher`, que le script pose ou
 retire. Une mauvaise réponse affiche « Mauvaise réponse » en rouge et laisse
-tout le reste en place. Interface et vocabulaire du code en français.
+tout le reste en place.
 
 ## Licence
 
