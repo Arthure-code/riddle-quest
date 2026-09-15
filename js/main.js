@@ -35,11 +35,47 @@ function validerReponseEnigme () {
     const refReponseEntree = refChampReponseEnigme;
     const strReponseAttendue = arrReponsesEnigmesPigees[intIndexEnigmeCourant];
 
-    // À compléter
+    if (normaliser(refReponseEntree.value) !== normaliser(strReponseAttendue)) {
+        refCommentaireEnigme.textContent = 'Mauvaise réponse';
+        refCommentaireEnigme.classList.add('erreur');
+        return;
+    }
+
+    // Bonne réponse : le commentaire s'efface et l'étoile de cette énigme
+    // apparaît. Les étoiles sont numérotées à partir de 1.
+    refCommentaireEnigme.textContent = '';
+    refCommentaireEnigme.classList.remove('erreur');
+    document.getElementById('etoileEnigme' + (intIndexEnigmeCourant + 1)).classList.remove('cacher');
+
+    intIndexEnigmeCourant++;
+    refReponseEntree.value = '';
+
+    if (intIndexEnigmeCourant < arrEnigmesPigees.length) {
+        refEnigmeCourante.textContent = arrEnigmesPigees[intIndexEnigmeCourant];
+    } else {
+        document.getElementById('zoneEnigme').classList.add('cacher');
+        document.getElementById('finJeu').classList.remove('cacher');
+    }
 }
 
 function empecherEnvoiForm(objEvenement) {
     objEvenement.preventDefault();
+}
+
+/**
+* Ramener une réponse à une forme comparable : espaces de bord retirés,
+* minuscules, accents enlevés et œ écrit oe. Un enfant qui tape « eponge »
+* ou « nœud » a trouvé la réponse.
+* @param {string} strTexte - Texte saisi ou attendu
+* @returns {string} Le texte normalisé
+*/
+function normaliser(strTexte) {
+    return strTexte
+        .trim()
+        .toLowerCase()
+        .replace(/œ/g, 'oe')
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '');
 }
 
 /**
