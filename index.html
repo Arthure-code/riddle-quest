@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr-CA">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cinq énigmes tirées au hasard, une étoile par bonne réponse.">
     <title>Jeu d'énigmes</title>
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 75 75'%3E%3Ccircle cx='37.5' cy='37.5' r='37.5' fill='%23ffdd55'/%3E%3Cpolygon points='37.5,12 45,30 65,30 49,42 55,62 37.5,50 20,62 26,42 10,30 30,30' fill='%23fff'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles/main.css">
     <script defer src="js/enigmes.js"></script>
     <script defer src="js/main.js"></script>
 </head>
@@ -16,15 +17,15 @@
     <main>
         <form class="formulaire" novalidate>
             <fieldset id="sectionEnigmes" class="formulaire__etape" aria-labelledby="titreEnigme">
-                <h2 id="titreEnigme">Énigmes</h2>
+                <legend id="titreEnigme"><h2>Énigmes</h2></legend>
                 <div id="zoneEnigme">
                     <p id="enigmeCourante"></p>
                     <div class="zone-champ">
                         <label for="champReponseEnigme">Votre réponse</label>
-                        <input id="champReponseEnigme" type="text" />
-                        <span id="commentaireEnigme"></span>
+                        <input id="champReponseEnigme" type="text" autocomplete="off">
+                        <span id="commentaireEnigme" aria-live="polite"></span>
                     </div>
-                    <button type="button" id="boutonRepondre">Répondre</button>
+                    <button type="submit" id="boutonRepondre">Répondre</button>
                 </div>
 
                 <div class="listeEtoiles" id="listeEtoiles">

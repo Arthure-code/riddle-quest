@@ -82,3 +82,18 @@ button:hover {
 #commentaireEnigme.erreur {
     color: red;
 }
+
+/* La légende du fieldset remplace l'ancien h2 et doit se placer comme lui :
+   dans le flux, sur toute la largeur, sans le décrochement sur la bordure
+   que les navigateurs lui donnent par défaut. */
+legend {
+    float: left;
+    width: 100%;
+    padding: 0;
+}
+
+/* Un bloc ne contourne pas un flottant, seul son texte le fait : ce qui suit
+   la légende doit donc repartir en dessous. */
+legend ~ * {
+    clear: both;
+}
