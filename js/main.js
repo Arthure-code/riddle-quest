@@ -1,4 +1,3 @@
-const refSectionEnigmes = document.getElementById('sectionEnigmes');
 const refEnigmeCourante = document.getElementById('enigmeCourante');
 let intIndexEnigmeCourant = 0;
 const arrEnigmesPigees = new Array();
